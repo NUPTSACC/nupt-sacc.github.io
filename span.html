@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
+    <link rel="stylesheet" type="text/css" href="css/mycss.css">
+    <link rel="stylesheet" type="text/css" href="css/mytime.css">
+    <link rel="stylesheet" type="text/css" href="css/he.css">
+    <link rel="icon" type="image/x-icon" href="img/logo.jpg" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo.jpg" />
+    <link rel="bookmark" href="img/logo.jpg" />
+</head>
+<body>
+<div class="section section1" id="page1">
+            <div class="main">
+                <nav id="nav">
+                    <ul>
+                        <li data-menuanchor="page1"><a href="#1">Home</a></li>
+                        <li data-menuanchor="page2">
+                            <a href="#2">Time Shaft</a>
+                        </li>
+                        <li data-menuanchor="page3"><a href="#3">Our Member</a></li>
+                        <li data-menuanchor="page4"><a href="#4">Our Group</a></li>
+                        <li data-menuanchor="page5"><a href="#5">Join Us</a></li>
+                    </ul>
+                </nav>
+                <span class="sacc"></span>
+                <div class="circlecircle">
+                    <div class="circleone"></div>
+                    <div class="circletwo"></div>
+                    <div class="circlethree"></div>
+                    <div class="circlefour"></div>
+                </div>
+                <p class="saccname">Science Associstion of Computer College</p>
+                <p class="wordone">Join us·What you need</p>
+                <p class="wordtwo">Interest——兴趣 Passion——激情 Perseverance——毅力
+                </p>
+                <div class="ghostbutton">
+                    <a href="#5" class="buttonone">
+                        <span class="border-top"></span>
+                        <span class="border-right"></span>
+                        <span class="border-botton"></span>
+                        <span class="border-left"></span> Join us !
+                    </a>
+                    <a href="#2" class="buttontwo">
+                        <span class="border-top"></span>
+                        <span class="border-right"></span>
+                        <span class="border-botton"></span>
+                        <span class="border-left"></span> Let's begin !
+                    </a>
+                </div>
+            </div>
+        </div>
+
+<script type="text/javascript" src="http://s0.qhimg.com/lib/jquery/183.js"></script>
+<script type="text/javascript" >
+(function() {
+
+    // 当菜单没被激活时
+    var isLocated = false;
+
+    $('.nav-wrap').on('click', '.main-nav', function(e) {
+        e.preventDefault();
+
+        var me = $(this),
+            navWrap = me.closest('.nav-wrap'), // 动画效果的父容器
+            navs = navWrap.find('nav a'); // 父容器中的所有子菜单
+
+        if (!navWrap.hasClass('active') && !isLocated) {
+
+            // 圆的半径 raduis
+            var width = navWrap.width(),
+                radius = width / 2;
+
+            // 圆形菜单的起始、终止角度
+            var startAngle = 0,
+                endAngle = 360;
+
+            // 两个子菜单间的夹角 gap
+            var total = navs.length,
+                gap = (endAngle - startAngle) / total;
+
+            // 角度->弧度
+            var radian = Math.PI / 180;
+
+
+            /*
+             * 计算并确定各个子菜单的最终位置
+             */
+            $.each(navs, function(index, item) {
+
+                // 当前子菜单与x轴正向的夹角 θ （角度->弧度）
+                var myAngle = (startAngle + gap * index) * radian; // θ
+
+                // 计算当前子菜单相对于左上角(0,0)的坐标 (x,y)
+                var myX = radius + radius * Math.cos(myAngle), // x=r+rcos(θ)
+                    myY = radius + radius * Math.sin(myAngle); // y=r+rsin(θ)
+
+                // 设置当前子菜单的位置 (left,top) = (x,y)
+                $(this).css({
+                    left: myX + 'px',
+                    top: myY + 'px'
+                });
+            });
+
+            isLocated = true;
+        }
+
+        navWrap.toggleClass('active');
+    });
+
+})();
+</script>
+<script type="text/javascript" src="js/mytime.js"></script>
+<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+<script>
+$(function() {
+    $('#freedom').fullpage({
+        sectionsColor: ['', '', '', '', ''],
+        loopBottom: true
+        // scrollingSpeed: 2000
+        // anchors:['page1','page2','page3','page4','page5']
+
+    });
+
+    setInterval(function() {
+        $.fn.fullpage.moveSlideRight();
+    }, 5000);
+
+    // setScrollingSpeed(function() {
+    //     $.fn.fullpage.scrollingSpeed(2000);
+    // });
+
+});
+</script>
+</body>
