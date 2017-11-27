@@ -1,0 +1,60 @@
+#index{
+    height: 100vh;
+    overflow: hidden;
+    .head{
+        margin: 20vh 0 0 0;
+        height: 52vh;
+        .saccname {
+            text-align: center;
+            font-family: Comic Sans MS;
+            color: #F5FFFA;
+            font-size: 40px;
+            font-weight: 6px;
+        }
+        .wordone{
+                text-align: center;
+                color: #F8F8FF;
+                font-weight: 2px;
+                font-size: 25px;
+                font-family: Comic Sans MS;
+                opacity: 0.92;
+                transform: translateX(0px)translateY(100px);
+            }
+        .wordtwo{
+                text-align: center;
+                color: #F8F8FF;
+                font-weight: 2px;
+                font-size: 20px;
+                font-family: Comic Sans MS;
+                opacity: 0.92;
+                transform: translateX(0px)translateY(130px);
+            }
+    }
+    .center{
+        margin: 0 10%;
+        height: 18vh;
+        .button{
+            font-family: Comic Sans MS;
+            background: rgba(221,221,221, 0.1);
+            border-radius: 0.5em;
+            height: 5vh;
+            width: 15%;
+            margin:0 5%;
+            border-width: thin;
+            a{
+                color: #fff;
+            }
+        }
+    }
+    .foot{
+        height: 10vh;
+        .indexfootimg{
+            background: url('../img/mouse.png');
+            background-repeat: repeat-y;
+            background-size: contain;
+            background-position: center;
+            height: 100%;
+            width: auto;
+        }
+    }
+}

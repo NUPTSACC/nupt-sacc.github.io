@@ -1,0 +1,323 @@
+/*********************************************
+ * Global control
+*********************************************/
+#hea_pc {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  height: 12vh;
+  background: rgba(83, 83, 83, 0); }
+  #hea_pc .nav_image {
+    height: 100%;
+    float: left;
+    width: 25%;
+    display: table; }
+    #hea_pc .nav_image div {
+      display: table-cell;
+      vertical-align: middle; }
+      #hea_pc .nav_image div img {
+        height: 40%;
+        width: auto; }
+      #hea_pc .nav_image div .circlecircle {
+        transform: translateX(0px) translateY(-221px); }
+        #hea_pc .nav_image div .circlecircle .circleone {
+          position: absolute;
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background: #FF8C00;
+          opacity: 0.95;
+          animation: circleonec 2s ease-in-out infinite; }
+
+@keyframes circleonec {
+  0% {
+    transform: translateX(-13px) translateY(160px); }
+  50% {
+    transform: translateX(-11px) translateY(150px); }
+  100% {
+    transform: translateX(-8px) translateY(135px);
+    opacity: 0; } }
+        #hea_pc .nav_image div .circlecircle .circletwo {
+          position: absolute;
+          width: 3px;
+          height: 3px;
+          border-radius: 50%;
+          background: #FFFF00;
+          opacity: 0.95;
+          animation: circletwoc 2s ease-in-out infinite; }
+
+@keyframes circletwoc {
+  0% {
+    transform: translateX(-15px) translateY(175px); }
+  50% {
+    transform: translateX(-12px) translateY(168px); }
+  75% {
+    transform: translateX(-10.5px) translateY(166px); }
+  100% {
+    transform: translateX(-10px) translateY(160px);
+    opacity: 0; } }
+        #hea_pc .nav_image div .circlecircle .circlethree {
+          position: absolute;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: #FF8C00;
+          opacity: 0.95;
+          z-index: 1;
+          animation: circlethreec 2s ease-in-out infinite; }
+
+@keyframes circlethreec {
+  0% {
+    transform: translateX(-22px) translateY(180px); }
+  50% {
+    transform: translateX(-19px) translateY(173px); }
+  100% {
+    transform: translateX(-17px) translateY(170px);
+    opacity: 0; } }
+        #hea_pc .nav_image div .circlecircle .circlefour {
+          position: absolute;
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          background: #FFFF00;
+          opacity: 0.95;
+          animation: circlefourc 2s ease-in-out infinite; }
+
+@keyframes circlefourc {
+  0% {
+    transform: translateX(-25px) translateY(185px); }
+  50% {
+    transform: translateX(-22px) translateY(182px); }
+  100% {
+    transform: translateX(-20px) translateY(180px);
+    opacity: 0; } }
+  #hea_pc .nav_bar {
+    font-family: Arial;
+    height: 100%;
+    float: right;
+    width: 75%; }
+    #hea_pc .nav_bar table, #hea_pc .nav_bar tr {
+      height: 100%;
+      width: 100%; }
+      #hea_pc .nav_bar table td, #hea_pc .nav_bar tr td {
+        height: 100%;
+        width: 20%; }
+        #hea_pc .nav_bar table td a, #hea_pc .nav_bar tr td a {
+          color: #fff; }
+
+@keyframes header_expand {
+  from {
+    height: 14vh; }
+  to {
+    height: 12vh;
+    background: rgba(83, 83, 83, 0.7);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5); } }
+
+@keyframes header_shrink {
+  0% {
+    opacity: 1;
+    background: rgba(83, 83, 83, 0.7); }
+  70% {
+    background: rgba(83, 83, 83, 0.5); }
+  100% {
+    opacity: 0; } }
+  #hea_pc:hover {
+    background: rgba(83, 83, 83, 0.5); }
+
+#index {
+  height: 100vh;
+  overflow: hidden; }
+  #index .head {
+    margin: 20vh 0 0 0;
+    height: 52vh; }
+    #index .head .saccname {
+      text-align: center;
+      font-family: Comic Sans MS;
+      color: #F5FFFA;
+      font-size: 40px;
+      font-weight: 6px; }
+    #index .head .wordone {
+      text-align: center;
+      color: #F8F8FF;
+      font-weight: 2px;
+      font-size: 25px;
+      font-family: Comic Sans MS;
+      opacity: 0.92;
+      transform: translateX(0px) translateY(100px); }
+    #index .head .wordtwo {
+      text-align: center;
+      color: #F8F8FF;
+      font-weight: 2px;
+      font-size: 20px;
+      font-family: Comic Sans MS;
+      opacity: 0.92;
+      transform: translateX(0px) translateY(130px); }
+  #index .center {
+    margin: 0 10%;
+    height: 18vh; }
+    #index .center .button {
+      font-family: Comic Sans MS;
+      background: rgba(221, 221, 221, 0.1);
+      border-radius: 0.5em;
+      height: 5vh;
+      width: 15%;
+      margin: 0 5%;
+      border-width: thin; }
+      #index .center .button a {
+        color: #fff; }
+  #index .foot {
+    height: 10vh; }
+    #index .foot .indexfootimg {
+      background: url("../img/mouse.png");
+      background-repeat: repeat-y;
+      background-size: contain;
+      background-position: center;
+      height: 100%;
+      width: auto; }
+
+#daily {
+  padding: 8em 0 7em 0;
+  width: 100%; }
+  #daily table th {
+    width: 8%;
+    padding: 2em 1.5em 0 0;
+    vertical-align: top; }
+    #daily table th img {
+      height: 2em;
+      width: auto; }
+  #daily table .th {
+    padding: 2em 1.5em 0 3em; }
+  #daily table td {
+    font-family: Comic Sans MS;
+    color: grey;
+    width: 25%;
+    text-align: left;
+    vertical-align: text-top; }
+    #daily table td .Dailyheader {
+      text-align: center;
+      color: dimgray;
+      font-weight: 2px;
+      font-size: 25px;
+      font-family: Comic Sans MS;
+      padding-bottom: 1.5em; }
+
+#intro {
+  padding-top: 4em;
+  padding-bottom: 3em; }
+  #intro .head {
+    font-family: Comic Sans MS; }
+    #intro .head img {
+      height: 5em;
+      width: auto; }
+    #intro .head h3 {
+      margin: 3vh 0; }
+  #intro .contant .detail {
+    font-family: Comic Sans MS;
+    width: 100%; }
+    #intro .contant .detail .detail_d {
+      float: left;
+      width: 50%;
+      min-height: 12vh;
+      padding: 1% 5%; }
+      #intro .contant .detail .detail_d .detail_title {
+        color: black;
+        font-family: Comic Sans MS;
+        width: 100%;
+        font-size: 1.5em; }
+      #intro .contant .detail .detail_d .detail_en {
+        color: goldenrod;
+        width: 100%;
+        font-size: 1.5em; }
+      #intro .contant .detail .detail_d .detail_intro {
+        color: dimgray;
+        padding-top: 1em;
+        width: 100%; }
+    #intro .contant .detail:after {
+      content: " ";
+      display: block;
+      clear: both; }
+
+#gitpull {
+  text-align: left;
+  padding-bottom: 4em; }
+  #gitpull .gitpull_title {
+    font-size: 4em;
+    text-align: center;
+    padding: 1em 0 1em 0; }
+
+footer #contact {
+  padding: 5em 0 3em 0; }
+  footer #contact:after {
+    content: ".";
+    display: block;
+    clear: both; }
+  footer #contact .c_head img {
+    height: 2em;
+    width: auto; }
+  footer #contact .c_head p {
+    font-size: 2em; }
+  footer #contact .c_left {
+    padding-left: 30%;
+    float: left;
+    width: 20%; }
+    footer #contact .c_left table {
+      width: 100%;
+      text-align: left; }
+      footer #contact .c_left table tr {
+        line-height: 2em; }
+      footer #contact .c_left table td {
+        color: rgba(49, 69, 255, 0.62); }
+        footer #contact .c_left table td a:link {
+          color: rgba(49, 69, 255, 0.62); }
+        footer #contact .c_left table td a:hover {
+          color: rgba(49, 69, 255, 0.9); }
+  footer #contact .c_right {
+    color: blue;
+    padding-left: 8%;
+    padding-right: 25%;
+    width: 17%;
+    float: left; }
+    footer #contact .c_right img {
+      text-align: right;
+      height: 9em;
+      width: auto; }
+    footer #contact .c_right #QQ_img {
+      display: none; }
+
+body {
+  margin: 0;
+  text-align: center; }
+  body a:link, body a:visited {
+    text-decoration: none; }
+  @media screen and (min-width: 1370px) {
+    body #mb {
+      display: none; } }
+  @media screen and (max-width: 1370px) {
+    body #hea_pc, body #index, body #daily, body #intro, body #history, body #gitpull, body footer {
+      display: none; } }
+
+#continer {
+  margin: 0 10%; }
+  @media screen and (min-width: 1920px) {
+    #continer {
+      width: 1920px;
+      margin: 0 auto; } }
+
+#hea_pc {
+  width: 100%; }
+
+#intro {
+  background: #fafafa; }
+
+#history {
+  height: 100vh; }
+
+#gitpull {
+  background: #fafafa; }
+
+footer #contact {
+  background: white; }
+
+footer #c_copyright {
+  background: rgba(83, 83, 83, 0.7); }

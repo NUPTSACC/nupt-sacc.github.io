@@ -1,0 +1,48 @@
+#intro{
+    padding-top: 4em;
+    padding-bottom: 3em;
+    .head{
+        
+        font-family: Comic Sans MS;;
+        img{
+            height: 5em;
+            width: auto;
+        }
+        h3{
+            margin: 3vh 0;
+        }
+    }
+    .contant{
+        .detail{
+            font-family: Comic Sans MS;
+            width: 100%;
+            .detail_d{
+                float: left;
+                width: 50%;
+                min-height: 12vh;
+                padding: 1% 5%;
+                .detail_title{
+                    color:black;
+                    font-family: Comic Sans MS;
+                    width: 100%;
+                    font-size: 1.5em;
+                }
+                .detail_en{
+                    color:goldenrod;
+                    width: 100%;
+                    font-size: 1.5em;
+                }
+                .detail_intro{
+                    color:dimgray;
+                    padding-top: 1em;
+                    width: 100%;
+                }
+            }
+            &:after{
+                content: " ";
+                display: block;
+                clear: both;
+            }
+        }
+    }
+}

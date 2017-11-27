@@ -1,0 +1,9 @@
+# dependencies
+/node_modules
+
+/style/daily*
+/style/footer*
+/style/gitpull*
+/style/header*
+/style/index*
+/style/intro*

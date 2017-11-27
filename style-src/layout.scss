@@ -1,0 +1,55 @@
+/*********************************************
+ * Global control
+*********************************************/
+@import './header';
+@import './index';
+@import './daily';
+@import './intro';
+@import './gitpull';
+@import './footer';
+$pad: 1370px;
+body{
+    margin: 0;
+    text-align: center;
+    a:link,a:visited{text-decoration:none}
+    //if > pad
+    @media screen and (min-width:$pad){
+        #mb{
+            display: none;
+        }
+    }
+    //else
+    @media screen and (max-width:$pad){
+        #hea_pc,#index,#daily,#intro,#history,#gitpull,footer{
+            display: none;
+        }
+    }
+}
+#continer{
+    margin: 0 10%;
+    @media screen and (min-width:1920px){ 
+        //大于1920显示样式
+        width: 1920px;
+        margin: 0 auto;
+    }
+}
+#hea_pc{
+    width: 100%;
+}
+#intro{
+    background:rgba(250,250,250,1);
+}
+#history{
+    height: 100vh;
+}
+#gitpull{
+    background: rgb(250, 250, 250);
+}
+footer{
+    #contact{
+        background: rgba(255,255,255,1);
+    }
+    #c_copyright{
+        background: rgba(83,83,83,0.7);
+    }
+}

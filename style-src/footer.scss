@@ -1,0 +1,50 @@
+footer{
+  #contact{
+    
+    padding: 5em 0 3em 0;
+    &:after{
+        content: ".";
+        display: block;
+        clear: both;
+    }
+    .c_head{
+      img{
+        height: 2em;
+        width: auto;
+      }
+      p{
+        font-size: 2em;
+      }
+    }
+    .c_left{
+      padding-left: 30%;
+      float: left;
+      width: 20%;
+      table{
+        width: 100%;
+        text-align: left;
+        tr{line-height: 2em;}
+        td{
+          color: rgba(49, 69, 255, 0.62);
+          a:link{color: rgba(49, 69, 255, 0.62);}
+          a:hover{color: rgba(49, 69, 255, 0.9);}
+        }
+      }
+    }
+    .c_right{
+      color:blue;
+      padding-left: 8%;
+      padding-right: 25%;
+      width: 17%;
+      float: left;
+      img{
+        text-align: right;
+        height: 9em;
+        width: auto;
+      }
+      #QQ_img{
+        display: none;
+      }
+    }
+  }
+}
